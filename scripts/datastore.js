@@ -15,6 +15,12 @@
 	DataStore.prototype.add = function (key, val) {
 		this.data[key] = val;
 	};
+	DataStore.prototype.get = function (key) {
+		return this.data[key];
+	};
+		DataStore.prototype.getAll = function () {
+		return this.data;
+	};
 	// в объекте App создаем св-во DataStore, куда записываем функцию
 	App.DataStore = DataStore;
 	window.App = App;
