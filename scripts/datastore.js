@@ -11,14 +11,16 @@
 		this.data = {};
 	}
 
-	// Экземпляр DataStore будет сохранять информацию о заказе (val), используя адрес
-	// электронной почты посетителя (key).
+	// метод добавляет инф-у о заказе в объект data 
+	// key(string) - название св-ва,
+	// val(string) - значение св-ва,
 	DataStore.prototype.add = function (key, val) {
 		this.data[key] = val;
 	};
 
 	// метод get, который принимает на входе ключ, выполняет поиск значения
 	// для него в свойстве data экземпляра и возвращает это значение
+	// key(string) - название св-ва
 	DataStore.prototype.get = function (key) {
 		return this.data[key];
 	};
@@ -29,10 +31,11 @@
 	};
 
 	// метод для удаления информации
+	// key(string) - название св-ва
 	DataStore.prototype.remove = function (key) {
 		delete this.data[key];
 	};
-	
+
 	// в объекте App создаем св-во DataStore, куда записываем конструктор
 	App.DataStore = DataStore;
 	window.App = App;
