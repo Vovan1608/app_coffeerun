@@ -32,6 +32,7 @@
 	DataStore.prototype.remove = function (key) {
 		delete this.data[key];
 	};
+	
 	// в объекте App создаем св-во DataStore, куда записываем конструктор
 	App.DataStore = DataStore;
 	window.App = App;
