@@ -15,7 +15,7 @@
 		}
 	}
 
-	FormHandler.prototype.addSubmitHandler = function () {
+	FormHandler.prototype.addSubmitHandler = function (fn) {
 		console.log('Setting submit handler for form');
 		// Метод on принимает на входе имя события и обратный вызов, который не-
 		// обходимо будет запустить при срабатывании события. Мы вызвали функцию
@@ -31,6 +31,11 @@
 			});
 
 			console.log(data);
+			// при подтверждении отправки формы будет выпол-
+			// няться обратный вызов с передачей всех данных, введенных пользователем в форму
+			fn(data);
+			this.reset();
+			this.elements[0].focus();
 		});
 	};
 	
