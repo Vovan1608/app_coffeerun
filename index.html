@@ -5,6 +5,11 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Document</title>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css">
+	<style>
+		form :focus:required:invalid {
+			border-color: #a94442;
+		}
+	</style>
 </head>
 <body class="container">
 	<header>
@@ -66,6 +71,8 @@
 		</div>
 	</section>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js" charset="utf-8"></script>
+	<script src="webshim/polyfiller.js" charset="utf-8"></script>
+	<script src="scripts/validation.js" charset="utf-8"></script>
 	<script src="scripts/checklist.js" charset="utf-8"></script>
 	<script src="scripts/formhandler.js" charset="utf-8"></script>
 	<script src="./scripts/datastore.js"></script>
