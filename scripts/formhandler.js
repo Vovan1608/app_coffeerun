@@ -33,9 +33,11 @@
 			console.log(data);
 			// при подтверждении отправки формы будет выпол-
 			// няться обратный вызов с передачей всех данных, введенных пользователем в форму
-			fn(data);
-			this.reset();
-			this.elements[0].focus();
+			fn(data)
+			.then(function () {
+				this.reset();
+				this.elements[0].focus();
+			}.bind(this));
 		});
 	};
 
